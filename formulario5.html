@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input select, option, list, datalist, fieldset, legend e textarea </title>
+    <style>
+        form {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+
+        .quebra {
+            display: block;
+        }
+
+        .espaco {
+            margin-bottom: 15px;
+        }
+
+        .espaco_t {
+            margin-top: 10px;
+        }
+        progress{
+            margin-bottom: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form name="f_cadastro" action="#" method="get">
+        <!---SERVE PARA SELECOES COMO MASCULINO FEMININO. O VALOR SERVE PARA OCUPAR MENOS ESPACO NO BANCO DE DADOS-->
+
+        <select name="f_cor" size="" multiple>
+            <optgroup label="neutras">
+        <!---Optgroup e opcional, serve para separar em subordens os elementos dentro do select.-->
+                <option value="p">Preto</option>
+                <option value="b">Branco</option>
+            </optgroup>
+            <optgroup label="cores v">
+                <option value="v">Vermelho</option>
+                <option value="ve">Verde</option>
+            </optgroup>
+            <optgroup label="cores v">
+                <option value="a">Azul</option>
+                <option value="am">Amarelo</option>
+            </optgroup>
+            <optgroup label="outras">
+                <option value="c">Cinza</option>
+                <option value="m">Marrom</option>
+            </optgroup>
+        </select>
+
+        <br><br><br>
+        <!------------------------------->
+
+        <!---Parecido com o select, mas com funcionalidades extras. O list precisa receber o id do datalist que sera mostrado. Datalist a tag e (datal)-->
+        <input list="mes" name="f_cor">
+        <datalist id="cor">
+            <option value="red">Vermelho</option>
+            <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarelo</option>
+            <option value="white">Branco</option>
+            <option value="black">Preto</option>
+        </datalist>
+        <datalist id="mes">
+            <option value="Jan">Janeiro</option>
+            <option value="Feb">Fevereiro</option>
+            <option value="Mar">Marco</option>
+            <option value="Apr">Abril</option>
+            <option value="May">Maio</option>
+            <option value="Jun">Junho</option>
+        </datalist>
+
+    </form>
+    <br>
+
+    <!--FIELDSET SERVE COMO UM SEPARADOR DE SECOES DO FORMULARIO. POSSO TBM DESABILITAR, COMO NO EXEMPLO 2 E DAR UMA LEGENDA COM O LEGEND-->
+
+
+    <form name="f_cadastro" action="#" method="get">
+        <fieldset>
+            <legend>Dados 1:</legend>
+            <input list="cor" name="f_cor">
+            <datalist id="cor">
+                <option value="red">Vermelho</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarelo</option>
+                <option value="white">Branco</option>
+                <option value="black">Preto</option>
+            </datalist>
+            <datalist id="mes">
+                <option value="Jan">Janeiro</option>
+                <option value="Feb">Fevereiro</option>
+                <option value="Mar">Marco</option>
+                <option value="Apr">Abril</option>
+                <option value="May">Maio</option>
+                <option value="Jun">Junho</option>
+            </datalist>
+        </fieldset>
+        <br>
+        <fieldset disabled>
+            <legend>Dados 2:</legend>
+            <select name="f_cor" size="2" multiple>
+                <option value="p">Preto</option>
+                <option value="b">Branco</option>
+                <option value="v">Vermelho</option>
+                <option value="ve">Verde</option>
+                <option value="a">Azul</option>
+                <option value="am">Amarelo</option>
+                <option value="c">Cinza</option>
+                <option value="m">Marrom</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <br>
+    <form name="f_cadastro" action="#" method="get">
+        <!--textearea coloca uma caixa de texto semelhante aqueles de site com resposta grande. o cols e rows sao limite visivel, para adicionar limite de caractere, use maxlength, ex 100 abaixo. POsso colocar texto ja diretamente, mas nao e necessario(ex, o insira texto aqui)-->
+
+        <textarea name="f_comentario" id="" cols="50" rows="10" maxlength="100"
+            autofocus>Escreva o texto aqui</textarea>
+
+        <input class="quebra espaco_t" src="midia/seta.png" type="image" name="f_enviar2" width="40px">
+    </form>
+
+    <form oninput="res.value=parseInt(a.value)+parseInt(b.value)">
+
+        <!--RANGE E OUTPUT(Faz a saida de valores do input. o abaixo esta fazendo o calculo pelo script adicionado no form acima)-->
+        0<input type="range" value="50" id="a">100
+        <p>+</p>
+        <input type="number" id="b" value="0">
+        <p>=</p>
+        <output name="res" for="a b"></output>
+    </form>
+    <br><br><br>
+    <input type="range" min="0" max="100" value="0" onchange="p1.value=this.value">
+    <br>
+    <progress value="0" max="100" id="p1"></progress>
+</body>
+
+</html>

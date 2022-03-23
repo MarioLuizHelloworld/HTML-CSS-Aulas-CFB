@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario tipos de input Data</title>
+    <style>
+        form {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+
+        .quebra {
+            display: block;
+        }
+
+        
+        .espaco{
+            margin-bottom: 15px;
+        }
+
+        .espaco_t{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form name="f_cadastro" action="#" method="get">
+        <label class="quebra">Hora:</label>
+        <!--Time serve para marcar horario
+        OPCIONAL: MIN E MAX, PARA O CASO DE SEREM VALORES DE AGENDAMENTO POR EX
+        REQUIRED (SERVE PARA QQR INPUT) - SIGNIFICA QUE E OBRIGATORIO O PREENCHIMENTO.
+        -->
+        <input type="time" name="f_hora" min="09:00" max="17:00" required>
+        <input class="espaco_t quebra" type="submit" value="Enviar" name="f_enviar">
+
+        <!------------------------------->
+
+        <label class="quebra">Data:</label>
+        <!--Date serve para marcar data
+        OPCIONAL: MIN E MAX, PARA O CASO DE SEREM VALORES DE AGENDAMENTO POR EX
+        REQUIRED (SERVE PARA QQR INPUT) - SIGNIFICA QUE E OBRIGATORIO O PREENCHIMENTO.
+        -->
+        <input type="date" name="f_date" min="2022-06-03" max="2022-08-08" required>
+
+        <!------------------------------->
+
+        <label class="quebra">Data e Hora:</label>
+        <!--Datetime junta os dois anteriores
+        -->
+        <input type="datetime-local" name="f_date_hora" required>
+
+        <!------------------------------->
+
+        <label class="quebra">Mes:</label>
+        <input type="month" name="f_mes">
+
+        <!------------------------------->
+
+        <label class="quebra">Semana:</label>
+        <input type="week" name="f_semana">
+
+        <!------------------------------->
+
+        
+        <!--Hidden retorna um valor oculto, nao aparece na tela-->
+        <input type="hidden" name="canal" value="cfbcursos">
+        <input type="hidden" name="curso" value="html5">
+
+        <input class="espaco_t quebra" type="submit" value="Enviar" name="f_enviar">
+
+    </form>
+</body>
+
+</html>

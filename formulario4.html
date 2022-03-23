@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario input color, email, image, tel, number, search, file e url</title>
+    <style>
+        form {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+
+        .quebra {
+            display: block;
+        }
+
+        .espaco {
+            margin-bottom: 15px;
+        }
+
+        .espaco_t {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="f_cadastro" action="#" method="get">
+
+        <label class="quebra">Selecione uma cor:</label>
+        <!--Para a selecao de uma cor-->
+        <input type="color" name="f_cor">
+
+        <!------------------------------->
+
+        <label class="quebra espaco_t">Digite seu email:</label>
+        <input type="email" name="f_email">
+
+        <!------------------------------->
+
+        <!--O IMAGE PODE SUBSTITUIR O ENVIAR, COMO UM BOTAO. POSSO COLOCAR UMA SETA POR EXEMPLO-->
+        <input class="quebra espaco_t" src="midia/seta.png" type="image" name="f_enviar2" width="40px">
+
+        <!------------------------------->
+
+        <!--tel (Pattern e placeholder)
+            number (step, max, min)
+            search 
+        -->
+        <label class="quebra">Telefone:</label>
+        <!--Para telefone. pattern indica quais numeros podem ir em cada area do numero, desde o ddd ao numero. placeholder indica o formato do numero-->
+        <input type="tel" name="f_tel" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxxx-xxxx">
+
+        <!--Pattern tbm serve para senha, ex: [a-zA-Z0-9]{5}-->
+        <!------------------------------->
+
+        <label class="quebra espaco_t">Escolha um numero:</label>
+        <input type="number" name="f_numero" step="2" min="0" max="10">
+
+        <!------------------------------->
+
+        <!--Proprio para pesquisa-->
+        <label class="quebra espaco_t">Pesquisa:</label>
+        <input type="search" name="f_pesquisa">
+
+        <!--FILE
+            
+            URL
+        -->
+
+        <!--serve para escolher arquivos do pc, igual qnd pede para enviar uma foto no pc.
+        O multiples serve para poder selecionar varios arquivos
+        O accept eu posso colocar varios formatos de arquivo, .doc, .docx, .jpg, .png, .png, .pdf...
+        -->
+        <label class="quebra espaco_t">Selecione o arquivo:</label>
+        <input type="file" name="f_arquivo" multiple accept=".jpg, .gif, .png">
+
+        <!------------------------------->
+        
+        <!--URL. posso adicionar placeholder="https://cfbcursos.com.br"
+        pattern="https://.*"-->
+        <label class="quebra">Digite o url:</label>
+        <input type="url" name="f_url">
+
+
+    </form>
+</body>
+
+</html>
