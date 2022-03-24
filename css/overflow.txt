@@ -1,0 +1,7 @@
+Overflow = Quando o elemento ultrapassa o container q ele está. Seu Padrão é visible
+
+Hidden para esconder oq exceder.
+
+Scroll para adicionar uma barra de rolagem.
+
+Auto para se adequar ao conteúdo, ou seja, só adicionará scroll de acordo com a necessidade.

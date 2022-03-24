@@ -1,0 +1,15 @@
+Position 
+
+Padrão é static, não consigo modificar sua localização para seu container
+
+Absolute = Posso mudar a posição, top, left, right em relação ao seu container, elemento pai.
+
+Ex> Uma div contida em outra div pai
+
+Relative = Sua posição fica em relação ao elemento anterior, desde q tenha posição static, senão fica em relação ao container mesmo.
+
+Fixed = Sua posição sempre ficará em relaçao a janela, ao body.
+
+<------------------------------------------>
+z-index = Significa qual elemento ficará na frente caso tenham elementos sobrepostos.
+Definimos com numeros, o q tiver maior numero ficará na frente.

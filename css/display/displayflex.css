@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* Caracteristicas: Usando o display Flex no container, ou seja o elemento pai, os elementos filho nao precisam receber uma serie de caracteristicas de float, display inline pq ja sao pre formatados pelo elemanto flex no container.*/
+
+section {
+    border: 3px solid red;
+    display: flex;
+    
+    /* Configuracoes para browsers antigos, como mozila, caso nao leiam o display flex normal*/
+    display: -webkit-flex;
+    display: -moz-flex;
+
+    /* O FLEX WRAP POR PADRAO E NOWWRAP. SERVE PARA QUEBRAR A LINHA QUANDO DIMINUIR A TELA. LEMBRE DE TIRAR O FLEX NO ELEMENTO FILHO, NESSE CASO A DIV.*/
+    flex-wrap: wrap;
+    -webkit-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+
+    /* Alinhamento Horizontal: flex-start| center| flex-end*/
+    justify-content: flex-start;
+    -webkit-justify-content:flex-start;
+    -moz-justify-content:flex-start;
+    /* Alinhamento Vertical: flex-start| center| flex-end*/
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    /* Direcao dos elementos: row| column| reverse*/
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+}
+
+div{
+    border: 1px solid black;
+    /* O Flex ajusta os elementos com o msm tamanho para o container. TIRE SE FOR USAR O FLEX WRAP*/
+    /*flex: 1; e a msm propriedade de flex-grow, nao use juntos*/
+    width: 200px;
+    height: 50px;
+     /*flex: 1;*/
+}
+
+#d1{  /* */
+    order: 2; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+    
+    /* O grow é o quanto pode esticar do tamanho da div não ocupada pelos outros elementos, vai de 0 a 1.*/
+    flex-grow: 1;
+}
+
+#d2{
+    order: 4; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+
+    /* O  é se o elemento pode retrair na div, vai de 0 a 1*/
+    flex-shrink: 0;
+}
+
+#d3{
+    order: 6; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+}
+
+#d4{
+    order: 5; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+
+    /* O basis é o espaço que sera ocupado pelo elemento no container. Medido em porcentagem*/
+
+    flex-basis: 50%;
+}
+
+#d5{
+    order: 3; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+}
+
+#d6{
+    order: 1; /* indica a ordem de cada div, basta colocar um order em cada uma delas*/
+}

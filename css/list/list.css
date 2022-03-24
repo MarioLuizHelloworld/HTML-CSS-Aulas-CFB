@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+ul, ol{
+
+    /* list-style-image: url(); Para imagens
+    list-style-type: square, dot e afins
+    list-style-position: inside ou outside;
+    */
+    list-style: decimal-leading-zero outside;
+    font-size: 25px;
+    
+}
+
+/* 
+Outline: ; Serve para fazer uma borda sem precisar ocupar espaço na tela, ou seja, a caixa não muda de posição.
+*/

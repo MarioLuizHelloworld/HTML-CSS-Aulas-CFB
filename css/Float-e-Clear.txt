@@ -1,0 +1,7 @@
+Float = é a flutuação de elemento, como por exemplo uma imagem. Se definirmos como left por ex, a imagem ficará na esquerda e o texto seguirá normalmente ao lado dela.
+
+<------------------------------------------->
+
+clear = é a propriedade q eu posso usar em um elemento para ele começar após o float, como um paragrafo por ex. Use uma classe para o paragrafo, h, escolhido.
+
+Use right, left ou both de acordo com a posição dos float.

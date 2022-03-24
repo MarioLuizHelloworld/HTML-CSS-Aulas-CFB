@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* TIPOS DE TRANSFORMAÇÃO
+    TRANSFORM: TRANSLATE(200PX, 200PX)
+    TRANSFORM: ROTATE(45DEG)
+    TRANSFORM: SCALE(2)
+    TRANSFORM: SKEWX(45DEG)
+    TRANSFORM: SKEWY(45DEG)
+    TRANSFORM: SKEW(-45DEG, 0DEG)
+    TRANSFORM-ORIGIN:100%, 0%
+    TRANSFORM: MATRIX(SCALEX, SKEWY, SKEWX, SCALEY, TRANSLATEX, TRANSLATEY);
+    */
+    transform: matrix(1.5, 0, 0, 1.5, 200, 200);
+}

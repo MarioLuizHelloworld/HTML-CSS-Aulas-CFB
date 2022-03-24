@@ -1,0 +1,25 @@
+p{
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    /* O Transition serve para a suavização temporal do elemento normal e a pseudoclasse*/
+    transition: width 2s, height 2s, background-color 2s, color 2s, transform 0.5s;
+    
+    
+    /* O Transition-timing-function irá modificar certos padrões da velocidade. ease/linear/ease-in/ease-out/cubic-bezier(0,0,0,0)*/
+    transition-timing-function: cubic-bezier(1, 0.5, 0.5, 1);
+
+    /* O Transition-delay define o tempo ate começar a animação*/
+    transition-delay: 1s;
+}
+
+p:hover{
+    width: 500px;
+    height: 120px;
+    background-color: rgb(245, 72, 72);
+    color: azure;
+    transform: rotate(360deg);
+}

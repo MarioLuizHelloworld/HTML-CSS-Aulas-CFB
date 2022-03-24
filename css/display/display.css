@@ -1,0 +1,28 @@
+@charset "UTF-8";
+div,
+span {
+    border: 1px solid black;
+}
+
+#d1 {
+    /* div Padrão display: none;*/
+    /* Some com o elemento, ele passa a não existir*/
+    display: none;
+}
+
+#s1 {
+    /* span Padrão display: inline;*/
+    /* inline-block possibilita colocar os elementos na msm linha por causa do INLINE, e configurar a largura e a altura pelo BLOCK*/
+    display: inline-block;
+}
+
+#d2 {
+    /* div Padrão display: none;*/
+    /* Inline possibilita colocar os elementos na msm linha*/
+    display: inline;
+}
+
+#s2 {
+    /* span Padrão display: inline;*/
+    display: block;
+}
