@@ -1,0 +1,66 @@
+@keyframes anima1{
+    
+    /*o left do from aqui no caso serve para uma transição suave*/
+    
+    /*from{left:0px}
+    to{left:500px}*/
+    
+    /*Se eu quiser q ele vá para o left e fique parado, não voltando pro zero, eu defino a  posição dele como left:500px no p e coloco from 0 to 500*/
+
+    /* from{left:0px}
+    to{left:500px}*/
+
+    /*Se eu quiser q anime em outras posiçoes, como o top por ex,eu defino o top no p e coloco ; depois de definir o left/right no FROM/TO*/
+    
+    /*from{left:0px; top:0px}
+    to{left:500px; top:300px}*/
+
+    from{left:500px; top:300px}
+    to{left:0px; top:0px}
+}
+
+@keyframes anima2{
+    from{background-color: beige; left:0px; top:0px}
+    to{background-color: aqua; left:0px; top:0px}
+    
+    /*Aqui eu posso fazer a animação de cor, definindo no p qual animação será executada. Posso colocar os dois animas tbm*/
+
+}
+
+@keyframes anima3{
+    from{background-color: aqua; left:0px; top:0px}
+    to{background-color: red; left:0px; top:0px}
+    
+    /*Aqui eu posso fazer a animação de cor, definindo no p qual animação será executada. Posso colocar os dois animas tbm*/
+
+}
+
+@keyframes anima4{
+
+    from{left:0px; top:0px}
+    to{left:500px; top:300px}
+}
+
+p{
+    /*PRECISA SER DEFINIDO O POSITION*/
+    position: relative;
+    left: 500px;
+    top: 300px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+
+    /*IDENTIFIQUE AQUI A DURAÇÃO E O NOME DA CONDIGURAÇÃO DE ANIMAÇÃO ESCOLHIDA*/
+    animation-name: anima1, anima2, anima3, anima4;
+    animation-duration: 3s;
+
+    /*Semelhante ao transition, escolhe a velocidade*/
+    animation-timing-function: linear;
+
+    /*Posso definir um delay para cada uma das animaões tbm caso eu queira*/
+    animation-delay: 0s, 2s;
+
+}

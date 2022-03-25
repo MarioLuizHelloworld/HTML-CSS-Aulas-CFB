@@ -1,0 +1,36 @@
+div{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(244, 250, 250);
+
+    /*PARA REDIMENSIONAMENTO DA DIV NA MÃO, USE RESIZE E OVERFLOW. ESCOLHA OVERFLOW AUTO E RESIZE HORIZONTAL/VERTICAL/BOTH*/
+    resize: both;
+    overflow: auto;
+    
+    
+    /*USE O FLOAT CASO QUEIRA QUE O PARAGRAFO FIQUE AO LADO DA DIV*/
+    float: left;
+}
+
+    /*PARA FAZER O RESIZE NUMA IMAGEM*/
+
+#dimg{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(244, 250, 250);
+    resize: both;
+    overflow: hidden;
+    float: left;
+}
+
+#dimg img{
+    /*Configurações para permitir o redimensionamento da imagem*/
+    width: 100%;
+    height: 100%;
+}

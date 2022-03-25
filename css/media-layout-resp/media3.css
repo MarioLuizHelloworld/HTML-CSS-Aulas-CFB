@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    font-size: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    /*Mesmo que o site não precise de barra de rolagem no eixo y, é bom ter pra caso haja outra pagina, não arredar os elementos e mudar o tamanho*/
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+header,section,footer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header{
+    background: black;
+    align-items: center;
+}
+
+header img{
+    width: 301px;
+    height: 111px;
+    margin: 10px 0px;
+}
+
+header nav{
+    display: flex;
+}
+
+.btmenu{
+    text-decoration: none;
+    display: flex;
+    width: 120px;
+    height: 30px;
+    margin: 2px;
+    padding: 1px 5px 1px 5px;
+    background-color: #222;
+    border-radius: 10px;
+    color: #bbb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    border: 0px;
+    text-transform: uppercase;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btmenu:hover{
+    background-color: #c22;
+    color: #fff;
+}
+
+.banner{
+    padding: 0px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador{
+    margin: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buscador p{
+    width: 800px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000;
+}
+
+select, label{
+    color: #000;
+}
+
+.buscador form{
+    width: 800px;
+    border: 1px solid #888;
+    padding: 10px;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.destaque{
+    margin: auto;
+    padding: 50px;
+    background: #000;
+    border-radius: 100%;
+}
+
+.destaque:hover{
+    background: #c22;
+}
+
+footer{
+    margin-top: 10px;
+    background: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 450px) and (orientation:portrait){
+
+    /*Não é obrigatório colocar a orientação, senão colocar, ele irá ler tanto para em pé quanto deitado*/
+
+    header, section, footer{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    header{
+        /*Pro menu ficar abaixo da logo*/
+        flex-direction: column;
+    }
+
+    header img{
+        width: 90%;
+        height: 90%;
+    }
+
+    header nav{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btmenu{
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .banner, footer, #destaques{
+         /*Some com a foto do banner*/
+        display: none;
+    }
+
+    .buscador form, .buscador p{
+        width: 100%;
+    }
+
+    .buscador p, select, label{
+        font-size: 20px;
+    }
+}

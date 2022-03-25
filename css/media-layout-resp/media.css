@@ -1,0 +1,40 @@
+img{
+    width: 100px;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+@media screen and (min-width:0px) and (max-width:420px) {
+    body{
+        background-color: red;
+    }
+
+    img{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:421px) and (max-width:820px) {
+    body{
+        background-color: rgb(0, 60, 255);
+    }
+
+    img{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:821px) and (max-width:1220px) {
+    body{
+        background-color: rgb(255, 208, 0);
+    }
+
+    img{
+        width: 100%;
+    }
+    
+}

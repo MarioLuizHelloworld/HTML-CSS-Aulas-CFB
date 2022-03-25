@@ -1,0 +1,20 @@
+p{
+    /*PRECISA SER DEFINIDO O POSITION*/
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+
+    /*Espacamento entre colunas e linha entre elas*/
+    column-gap: 50px;
+    column-rule: 5px outset red;
+}

@@ -1,0 +1,50 @@
+@keyframes anima{
+
+    /*Ex.Quadro chave - Irá retornar o mesmo efeito do animation1*/
+    
+    /*0%{left:500px; top:300px}
+    14%{left:0px; top:0px}
+    28%{background-color: beige; left:0px; top:0px}
+    42%{background-color: aqua; left:0px; top:0px}
+    57%{background-color: aqua; left:0px; top:0px}
+    71%{background-color: red; left:0px; top:0px}
+    85%{left:0px; top:0px}
+    100%{left:500px; top:300px}*/
+
+    0% {left:0px; top:0px}
+    25% {left:500px; top:0px}
+    50% {left:500px; top:500px}
+    75%{left:0px; top:500px}
+    100%{left:0px; top:0px}
+}
+
+p{
+    /*PRECISA SER DEFINIDO O POSITION*/
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+
+    /*IDENTIFIQUE AQUI A DURAÇÃO E O NOME DA CONDIGURAÇÃO DE ANIMAÇÃO ESCOLHIDA*/
+    animation-name: anima;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+
+    /*animation-iteration-count para a quantidade de vezes que uma animação será executada. Coloque o numero que quer ou infinite*/
+
+    animation-iteration-count: infinite;
+
+    /*animation-play-state para determinar se a animação será executada ou pausada em algum momento(com js por ex), running ou paused*/
+
+    animation-play-state: running;
+    
+    /*animation-direction para determinar a direção da animação, se será normal, reverse (sentido anti-horario) ou alternate*/
+
+    animation-direction: alternate;
+}
