@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Css</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+
+        .container{
+            /*Defina o display para grid*/
+            display: grid;
+
+            /*Definindo numero de colunas e tamanho. Quantos autos eu adicionar, mais colunas terão. Ex. auto 50px 100px auto = 4 colunas com tamanhos diferentes*/
+            
+            grid-template-columns: auto auto auto;
+            
+            /*Definindo numero de linhas e tamanho. O numero de linhas vai depender da quantidade q eu pré defini de conteudo. Ex. auto 50px 100px = linhas com tamanhos diferentes*/
+
+            /*grid-template-rows: 100px auto 50px;*/
+
+            /*columns e rows gap, insere gap entre colunas e linhas. em px. Posso colocar um só para os dois q é o gap (ou use margin no item)*/
+            gap: 10px 20px;
+        }
+
+        .it1{
+
+            /*grid-column-start e end, indicam onde irá iniciar e onde irá terminar a coluna do item q receber a class. Importante, o end indica o término, ou seja, se houver 4 colunas e eu colocar 4 no end, a coluna só irá ocupar 3 colunas.*/
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+            
+            /*grid-row-start e end, indicam onde irá iniciar e onde irá terminar a linha do item q receber a class. Importante, o end indica o término, ou seja, se houver 4 linhas e eu colocar 4 no end, a linha só irá ocupar 3 linhas.*/
+
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .area{
+            /*grid-area é a junção de grid-column-start e end E grid-row-start e end. Nessa ordem = row-start, column-start, row-end, column-end*/
+            grid-area: 1 / 1 / 3 / 3;
+        }
+
+        .area2{
+            grid-area: 3/ 2 / 5 / 4;
+        }
+
+        .item{
+            background-color: blue;
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item area"> Teste grid 1</div>
+        <div class="item"> Teste grid 2</div>
+        <div class="item"> Teste grid 3</div>
+        <div class="item"> Teste grid 4</div>
+        <div class="item"> Teste grid 5</div>
+        <div class="item area2"> Teste grid 6</div>
+        <div class="item"> Teste grid 7</div>
+        <div class="item"> Teste grid 8</div>
+        <div class="item"> Teste grid 9</div>
+    </div>
+    
+</body>
+</html>

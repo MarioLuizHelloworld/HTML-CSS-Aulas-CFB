@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08</title>
+    <style>
+        .item {
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            font-size: 1em;
+            color: white;
+            /*Para mexer no flex-grow, não defina width para o item*/
+
+            /*Para mexer no flex-shrink, defina width para o item*/
+            width: 200px;
+
+        }
+
+        .container {
+            max-width: 800px;
+            /* Posso definir a altura, aí os itens se adaptarão ao container. */
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            /* Primeira modificação display de block para flex*/
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .reduzir{
+            /* flex-shrink padrão 1. define a capacidade do elemento de reduzir. no zero ele nao reduz. qnt maior o numero, mais reduz. so funciona no nowrap.*/
+            flex-shrink: 0;
+        }
+
+        .tam1{
+            /* PROPRIEDADE DE ITEM, NÃO FUNCIONA NO CONTAINER. O flex-grow define a largura de acordo com os outros itens e seu container. Quanto maior o número definido para o item, maior será a diferença Quando este está definido, o justify-content é anulado*/
+
+            flex-grow: 0;
+        }
+
+        .tam2{
+            flex-grow: 1;
+        }
+
+        .tam3{
+            flex-grow: 4;
+        }
+
+        .base{
+            /* PROPRIEDADE DE ITEM, NÃO FUNCIONA NO CONTAINER. O flex-basis define a largura igualmente para os itens, independente do tamanho do conteúdo escrito, desde que seja definido o msm valor. O justify-content é anulado*/
+            
+            flex-basis: auto;
+            
+            order: 0;
+        }
+
+        .base1{
+            flex-basis: 1;
+
+            /* PROPRIEDADE DE ITEM, NÃO FUNCIONA NO CONTAINER. O order define a ordem dos itens.*/
+
+            order: 1;
+        }
+
+        .base2{
+            flex-basis: 2;
+            order: 2;
+        }
+
+        .base2{
+            flex-basis: 0
+        }
+
+        .flex0{
+            /*JUNTA GROW, SHRINK E BASIS
+            Flex:0 =  0  /  1    /   0
+            */
+            flex: 0;
+        }
+
+        .flex1{
+            /*JUNTA GROW, SHRINK E BASIS
+        Flex:1 ou 2 =  1  /  1    /   0
+            */
+            flex: 1;
+        }
+
+        .self{
+            /*Align-self mexe com o posicionamento individual de cada item(align-items), independente do align-item geral. flex start, flex end, center.*/
+            align-self: flex-end;
+        }
+
+
+        body {
+            text-align: center;
+            margin: 25px 0 0 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item flex0"> Testando X 1</div>
+        <div class="item flex1"> Testando X 2</div>
+        <div class="item"> Testando X 3 </div>
+        <div class="item flex0"> Testando X 4</div>
+        <div class="item"> Testando X 5</div>
+        <div class="item flex1"> Testando X 6</div>
+
+    </div>
+
+</body>
+
+</html>

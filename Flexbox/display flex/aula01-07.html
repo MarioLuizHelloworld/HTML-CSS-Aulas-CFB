@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+    <style>
+        .item {
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            font-size: 1em;
+            color: white;
+            /* Entendendo o width: calc(). No caso de eu querer 3 itens por linha, eu preciso fazer o calculo e levar em conta o margin e padding de cada lado somados. Nesse caso ficaria como abaixo. Inclusive, isso torna o justify-content obsoleto e desnecessário.*/
+            width: calc(33.3333% - 20px);
+        }
+
+        .container {
+            max-width: 800px;
+            /* Posso definir a altura, aí os itens se adaptarão ao container. */
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            /* Primeira modificação display de block para flex*/
+
+            /* O justify-content é o alinhamento definido de acordo com o flex direction(eixo principal), ou seja, muda dependendo do row e o column.flex-start/flex-end/space-between/space-around*/
+            justify-content: space-around;
+
+            /* Já o align-itens é o alinhamento definido de acordo com o CONTRARIO(eixo secundário) do flex direction. stretch/flex-start/flex-end/space-between/space-around*/
+            align-items: center;
+        }
+
+        .flexivel {
+            /* Tirei o display flex do container e passei pra essa class. Posso tbm passar o display diretamente para uma nova class, não irá faze diferença.*/
+            display: flex;
+        }
+
+        .direction {
+            /* Com o display flex, podemos mexer no flex-direction, que é se ficarão um ao lado do outro ou um embaixo do outro. row, column e reverse*/
+            flex-direction: row;
+        }
+
+        .wrap {
+            /* Wrap define a quebra de linha do container flexivel. padrao nowrap. wrap e reverse*/
+            flex-wrap: wrap;
+        }
+
+        /* flex-flow une o flex direction e o flex wrap em um só. */
+
+
+        body {
+            text-align: center;
+            margin: 25px 0 0 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flexivel direction wrap">
+        <div class="item"> Testando X</div>
+        <div class="item"> Testando X</div>
+        <div class="item"> Testando X</div>
+        <div class="item"> Testando X</div>
+        <div class="item"> Testando X</div>
+        <div class="item"> Testando X</div>
+
+    </div>
+
+</body>
+
+</html>
