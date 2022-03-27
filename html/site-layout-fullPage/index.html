@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Full Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#banner">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#cursos">Cursos</a>
+                    <a href="#canal">Canal</a>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner" class="banner">
+        <img src="img/bannera.jpg" alt="">
+    </section>
+
+    <section id="sobre" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            Sobre o canal
+        </article>
+        <article class="borda1" data-anima="direita">
+            Sobre Mim
+        </article>
+    </section>
+
+    <section id="cursos" class="flexivel">
+        <article class="borda1 containerCursos" data-anima="esquerda">
+            <img src="img/target001.png" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper001.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper002.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper003.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+        </article>
+        <article class="borda1 containerCursos" data-anima="centro">
+            <img src="img/target001.png" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper001.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper002.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper003.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+        </article>
+        <article class="borda1 containerCursos" data-anima="direita">
+            <img src="img/target001.png" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper001.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper002.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+            <img src="img/wallpaper003.jpg" class="mini" onclick=" cliqueModal(this)" alt="Testando">
+        </article>
+    </section>
+
+    <section class="parallax p1">
+        <article>
+            teste testado<br>teste testado<br>teste testado<br>teste testado<br>teste testado
+        </article>
+    </section>
+
+    <section id="canal" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            Imagem Link canal
+        </article>
+        <article class="borda1" data-anima="direita">
+            Link Direto para o canal
+        </article>
+    </section>
+
+    <section class="parallax p2">
+        <article>
+            teste testado<br>teste testado<br>teste testado<br>teste testado<br>teste testado
+        </article>
+    </section>
+
+    <section id="contato" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            Contato Esq
+        </article>
+        <article class="borda1" data-anima="centro">
+            Contato Cen
+        </article>
+        <article class="borda1" data-anima="direita">
+            Contato Dir
+        </article>
+    </section>
+
+    <div id="janelaModal" class="janelaModal escondeJanelaModal">
+        <span id="btnFechar" class="fecharModal">x</span>
+        <img src="imgModal" class="imgModal" alt="">
+        <div id="txtModal" class="txtModal"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

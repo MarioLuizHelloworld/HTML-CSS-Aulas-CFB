@@ -1,0 +1,41 @@
+.menu{
+    background-color: #444;
+    position: fixed;
+    top: 0px;
+    /*PARA ESCONDER O MENU - ICONE RETRATIL*/
+    left: -100px;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.menu a{
+    display: block;
+    text-align: center;
+    padding: 25px;
+    transition: all 0.5s ease;
+}
+
+.menu a:hover{
+    background-color: #400;
+}
+
+.ativo{
+    background-color: #a00;
+}
+
+/*PARA ESCONDER O MENU - ICONE RETRATIL*/
+
+.barra{
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    margin: 7.5px;
+}
+
+.btnMenu{
+    cursor: pointer;
+}
+
+.menuAberto{
+    left:0px;
+}
