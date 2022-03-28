@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.menuContainer{
+    width: 300px;
+    padding: 15px 0px;
+    background-color: rgb(160, 159, 159);
+}
+
+.menuContainer li a{
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menuContainer li a:hover{
+    background-color: rgb(212, 209, 209);
+}
+
+.menuContainer h2{
+    padding-left: 10px;
+}
+
+#pesquisa{
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+#menu{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.borda{
+    border: 1px solid black;
+}

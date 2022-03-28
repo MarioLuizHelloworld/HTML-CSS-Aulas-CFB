@@ -10,30 +10,31 @@
 <body>
 
     <nav class="tabs">
-        <button onclick="" id="">TESTE</button>
+        <button data-btnTabs onclick="abrirTab(event,'teste')" id="primeiro">TESTE</button> <!--ID COLOCADO É OPCIONAL CASO EU QUEIRA DEIXAR UMA TAB JÁ ABERTA PREVIAMENTE-->
 
-        <button onclick="" id="">TESTE 2</button>
+        <button data-btnTabs onclick="abrirTab(event,'teste2')" id="">TESTE 2</button>
 
-        <button onclick="" id="">TESTE 3</button>
+        <button data-btnTabs onclick="abrirTab(event,'teste3')" id="">TESTE 3</button>
     </nav>
 
     <article id="teste" class="conteudoTab">
-        <span class="fecharTab">x</span>
+        <span class="fecharTab" onclick="this.parentElement.style.display='none'">x</span>
         <h3>TESTE</h3>
         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quos pariatur tempora cupiditate quae voluptatibus necessitatibus blanditiis.</p>
     </article>
 
     <article id="teste2" class="conteudoTab">
-        <span class="fecharTab">x</span>
+        <span class="fecharTab" onclick="this.parentElement.style.display='none'">x</span>
         <h3>TESTE 2</h3>
         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quos pariatur tempora cupiditate quae voluptatibus necessitatibus blanditiis.</p>
     </article>
 
     <article id="teste3" class="conteudoTab">
-        <span class="fecharTab">x</span>
+        <span class="fecharTab" onclick="this.parentElement.style.display='none'">x</span>
         <h3>TESTE 3</h3>
         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quos pariatur tempora cupiditate quae voluptatibus necessitatibus blanditiis.</p>
     </article>
     
+    <script src="script.js"></script>
 </body>
 </html>
