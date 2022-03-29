@@ -1,0 +1,10 @@
+.imgRedonda{
+    border-radius: 40%;
+    width: 300px;
+    transition: all 0.5s;
+}
+
+.imgRedonda:hover{
+    border-radius: 0%;
+    transition: all 0.5s;
+}

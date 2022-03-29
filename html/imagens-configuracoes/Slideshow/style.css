@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.imgSlide{
+    vertical-align: middle;
+}
+
+.btnAnterior, .btnProximo{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.4s ease;
+    user-select: none;
+}
+
+.btnAnterior{
+    left: 0px;
+    border-radius: 0 5px 5px 0;
+}
+
+.btnProximo{
+    right: 0px;
+    border-radius: 5px 0 0 5px;
+}
+
+.btnAnterior:hover, .btnProximo:hover, .textoSlide:hover{
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+.textoSlide{
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.numeroSlide{
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0px;
+}
+
+.indicador{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5 ease;
+}
+
+.ativo, .indicador:hover{
+    background-color: #777;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.3s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.3s;
+
+}
+
+@keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+
+@-webkit-keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}

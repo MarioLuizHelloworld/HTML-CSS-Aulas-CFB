@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="slideshow-container">
+
+        <div class="slide fade">
+            <div class="numeroSlide">1/6</div>
+            <img src="img/img.1.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 1</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlide">2/6</div>
+            <img src="img/img.2.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 2</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlide">3/6</div>
+            <img src="img/img.3.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 3</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlide">4/6</div>
+            <img src="img/img.4.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 4</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlide">5/6</div>
+            <img src="img/img.5.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 5</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlide">6/6</div>
+            <img src="img/img.6.jpg" style="width: 100%;" alt="" class="imgSlide">
+            <div class="textoSlide"> Natureza - Slide 6</div>
+        </div>
+
+        <!-- 
+            OS BOTOES BTN ESTÃO DANDO ERRO, MAS OS INFERIORES ESTÃO CORRETOS-->
+            <!--<a class="btnAnterior" onclick="mudarSlide(-1)" href="">&lsaquo;</a>
+            <a class="btnProximo" onclick="mudarSlide(1)" href="">&rsaquo;</a>                 
+        -->
+    </section>
+
+    <section style="text-align: center;">
+        <span class="indicador" onclick="slideAtual(1)"></span>
+        <span class="indicador" onclick="slideAtual(2)"></span>
+        <span class="indicador" onclick="slideAtual(3)"></span>
+        <span class="indicador" onclick="slideAtual(4)"></span>
+        <span class="indicador" onclick="slideAtual(5)"></span>
+        <span class="indicador" onclick="slideAtual(6)"></span>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

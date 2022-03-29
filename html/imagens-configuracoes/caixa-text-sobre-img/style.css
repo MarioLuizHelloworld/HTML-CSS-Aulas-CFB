@@ -1,0 +1,63 @@
+.container{
+    width: 500px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+img{
+    width: 100%;
+}
+
+.container div{
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.baixoEsquerda{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 5px;
+    left: 0px;
+}
+
+.topoEsquerda{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+}
+
+.topoDireita{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    right: 0px;
+}
+
+.baixoDireita{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 5px;
+    right: 0px;
+}
+
+.centro{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

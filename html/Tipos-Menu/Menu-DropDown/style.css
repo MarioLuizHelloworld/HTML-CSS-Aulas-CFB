@@ -31,3 +31,10 @@
     background-color: #ddd;
 }
 
+.mostrarMenuDropdown{
+    display: block;
+}
+
+.menudropdown:hover .btndropdown{
+    background-color: #44f;
+}
